@@ -75,32 +75,4 @@ function updateStatus(order) {
 
 updateStatus(order);
 
-initStripe()
-
-// Socket
-let socket = io()
-
-// Join
-if(order) {
-    socket.emit('join', `order_${order._id}`)
-}
-let adminAreaPath = window.location.pathname
-if(adminAreaPath.includes('admin')) {
-    initAdmin(socket)
-    socket.emit('join', 'adminRoom')
-}
-
-
-socket.on('orderUpdated', (data) => {
-    const updatedOrder = { ...order }
-    updatedOrder.updatedAt = moment().format()
-    updatedOrder.status = data.status
-    updateStatus(updatedOrder)
-    new Noty({
-        type: 'success',
-        timeout: 1000,
-        text: 'Order updated',
-        progressBar: false,
-    }).show();
-})
 
