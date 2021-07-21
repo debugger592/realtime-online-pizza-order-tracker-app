@@ -536,4 +536,6 @@ section.status {
   border-color: #fa755a;
 }
 
-
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
