@@ -211,12 +211,6 @@
   }
 }
 
-@keyframes noty_modal_out {
-  100% {
-    opacity: 0;
-  }
-}
-
 @-webkit-keyframes noty_anim_in {
   100% {
     transform: translate(0);
@@ -311,24 +305,61 @@ body {
   color: #232323;
 }
 
-nav li:last-child a {
+div.nav-section {
+  background-color: #8b8e91;
+}
+
+div nav div#cartlogo li:last-child a {
   background: #FE5F1E;
 }
 
-nav li:last-child a:hover {
+div nav div#cartlogo li:last-child a:hover {
   background: #b23301;
 }
 
-nav li a {
-  transition: all 0.3s ease-in-out;
+div nav li a {
+  color: white;
 }
 
-nav li a:hover {
-  color: #FE5F1E;
+div nav li a {
+  transition: all 0.2s ease-in-out;
 }
 
-section.hero {
-  background: #F8F8F8;
+div nav li a:hover {
+  color: #e6f0f7;
+}
+
+.hero {
+  height: 570px;
+}
+
+.hero h1,
+h6 {
+  color: white;
+}
+
+#menuPageImage {
+  border: 2px solid red;
+  border-radius: 8px;
+}
+
+#cartPageImage {
+  border: 2px solid red;
+  border-radius: 8px;
+}
+
+#footer {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  background-color: #263238;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer p {
+  color: #CCC;
 }
 
 .size {
@@ -338,26 +369,63 @@ section.hero {
 .add-to-cart {
   border: 2px solid #FE5F1E;
   color: #FE5F1E;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .add-to-cart:hover {
   background: #FE5F1E;
   border-color: #fff;
   color: #fff;
+  border: 2px solid blue;
 }
 
 .add-to-cart:focus {
   outline: none;
 }
 
+.menuBox {
+  background: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuBox h1 {
+  background-color: #FE5F1E;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  border: 2px solid black;
+  color: white;
+  border-radius: 10px;
+  padding-top: 8px;
+}
+
+.minimumHeight {
+  min-height: 540px;
+}
+
+.solidBorder {
+  border: 3px solid #888162;
+}
+
+.light-section {
+  background-color: #F8F8F8;
+}
+
 .btn-primary {
   background: #FE5F1E;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn-primary:hover {
   background: #b23301;
+}
+
+.btn-primary:focus {
+  outline: none;
 }
 
 section.cart {
@@ -539,3 +607,4 @@ section.status {
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
+
