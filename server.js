@@ -1,3 +1,14 @@
+const homeController = require('./app/http/controllers/homeController')
+const authController = require('./app/http/controllers/authController')
+const cartController = require('./app/http/controllers/customers/cartController')
+const orderController = require('./app/http/controllers/customers/orderController')
+const adminOrderController = require('./app/http/controllers/admin/orderController')
+const statusController = require('./app/http/controllers/admin/statusController')
+
+// Middlewares 
+const guest = require('./app/http/middlewares/guest')
+const auth = require('./app/http/middlewares/auth')
+const admin = require('./app/http/middlewares/admin')
 require('dotenv').config()
 const express = require('express')
 const app = express()
